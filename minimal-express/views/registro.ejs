@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveX · Registro</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <section class="auth-card">
+      <header class="auth-header">
+        <img src="/imagenes/image.png" class="logo" alt="Logo DriveX">
+        <h1 class="titulo-principal">Crea tu cuenta</h1>
+        <p>Únete a DriveX y gestiona tu experiencia de conducción</p>
+      </header>
+
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="reg-username">Usuario</label>
+          <input
+            type="text"
+            id="reg-username"
+            name="username"
+            placeholder="Nombre de usuario"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Correo electrónico</label>
+          <input
+            type="email"
+            id="reg-email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password">Contraseña</label>
+          <input
+            type="password"
+            id="reg-password"
+            name="password"
+            placeholder="Crea una contraseña segura"
+            minlength="6"
+            required>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">
+            Acepto los términos y condiciones de DriveX y consiento el tratamiento de mis datos.
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Crear cuenta</button>
+          <button class="btn btn-secondary" type="button" onclick="window.location.href='/'">
+            Ya tengo cuenta
+          </button>
+        </div>
+      </form>
+
+      <p class="helper-text">
+        ¿Necesitas ayuda? <a href="mailto:soporte@drivex.com">Contacta con soporte</a>
+      </p>
+    </section>
+  </body>
+</html>

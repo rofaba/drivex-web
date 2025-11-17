@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Área de Usuario</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Bienvenido <span id="loggedInUser"><%= typeof username !== 'undefined' ? username : 'usuario' %></span></h1>
+      <p>Has iniciado sesión o completado tu registro correctamente.</p>
+      <a href="/">Volver al inicio</a>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var params = new URLSearchParams(window.location.search);
+        var username = params.get('username');
+        var usernameSpan = document.getElementById('loggedInUser');
+
+        if (usernameSpan && username) {
+          usernameSpan.textContent = username;
+        }
+      });
+    </script>
+  </body>
+</html>
