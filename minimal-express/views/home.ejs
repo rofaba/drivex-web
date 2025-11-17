@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveX · Catálogo</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body class="home-body">
+    <div class="home-wrapper">
+      <% var safeUsername = (typeof username !== 'undefined' && username) ? username : 'usuario'; %>
+      <% if (safeUsername !== 'usuario') { %>
+        <h2 style="text-align:right; margin:0 1rem 0 0; font-weight:normal; color:#444">Bienvenido, <%= safeUsername %></h2>
+      <% } %>
+      <header class="home-header">
+        <div class="home-logo">
+          <img src="/imagenes/image.png" alt="DriveX logo">
+          <span>DriveX</span>
+        </div>
+        <div class="home-search">
+          <input type="search" placeholder="Search vehicle, make or model">
+          <button type="button" aria-label="Buscar"></button>
+        </div>
+        <nav class="home-nav">
+          <a href="#" class="active">About us</a>
+          <a href="#" class="active">Cars</a>
+          <a href="#">Motobikes</a>
+          <a href="#">Trucks</a>
+          <a href="#">Offers</a>
+        </nav>
+        <div class="home-actions">
+          <% if (safeUsername !== 'usuario') { %>
+            <span style="font-size:1.1em; font-weight:bold; color:#315;"><i class="fa fa-user"></i> <%= safeUsername %></span>
+            <a class="btn btn-secondary" href="/logout" style="margin-left:0.7em;">Cerrar sesión</a>
+          <% } else { %>
+            <a class="btn btn-primary" href="/">Sign up</a>
+          <% } %>
+        </div>
+      </header>
+
+      <main class="home-main">
+        <section class="vehicle-grid">
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="BMW 335i">
+            <div class="vehicle-info">
+              <h3>BMW 335i</h3>
+              <p>9 000 € · 185 000 km · 185 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar BMW 335i"></button>
+          </article>
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="Seat Ibiza">
+            <div class="vehicle-info">
+              <h3>Seat Ibiza</h3>
+              <p>5 000 € · 150 000 km · 110 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar Seat Ibiza"></button>
+          </article>
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="Mercedes AMG GT">
+            <div class="vehicle-info">
+              <h3>Mercedes AMG GT</h3>
+              <p>90 500 € · 180 000 km · 421 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar Mercedes AMG GT"></button>
+          </article>
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="Peugeot 308">
+            <div class="vehicle-info">
+              <h3>Peugeot 308</h3>
+              <p>6 750 € · 100 000 km · 115 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar Peugeot 308"></button>
+          </article>
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="Renault Clio">
+            <div class="vehicle-info">
+              <h3>Renault Clio</h3>
+              <p>7 000 € · 95 000 km · 120 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar Renault Clio"></button>
+          </article>
+          <article class="vehicle-card">
+          <img src="/imagenes/image.png" alt="Ford Mustang">
+            <div class="vehicle-info">
+              <h3>Ford Mustang</h3>
+              <p>45 000 € · 40 000 km · 450 HP</p>
+            </div>
+            <button class="vehicle-fav" aria-label="Guardar Ford Mustang"></button>
+          </article>
+        </section>
+      </main>
+
+      <footer class="home-footer">
+        <p>DriveX is a creation of Los Del Fondo Devs. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
