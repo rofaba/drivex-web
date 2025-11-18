@@ -21,11 +21,37 @@ app.use(session({
   resave: false,
   saveUninitialized: true // debug: true para asegurar sesiones
 }));
+// Página de contacto
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/contact.html"));
+});
+
+// Procesar formulario y redirigir a la página de éxito
+app.post("/send-message", (req, res) => {
+
+  const { name, email, message } = req.body;
+  console.log("New message:");
+  console.log({ name, email, message });
+
+  // Aquí podrías guardar en DB o enviar un correo
+
+  res.redirect("/success");
+});
+
+// Página de éxito
+app.get("/success", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/success.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}/contact`);
+});
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/nosotros', nosotrosRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 
