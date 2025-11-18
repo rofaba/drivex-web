@@ -10,7 +10,7 @@
     <div class="home-wrapper">
       <% var safeUsername = (typeof username !== 'undefined' && username) ? username : 'usuario'; %>
       <% if (safeUsername !== 'usuario') { %>
-        <h2 style="text-align:right; margin:0 1rem 0 0; font-weight:normal; color:#444">Bienvenido, <%= safeUsername %></h2>
+        <h2 style="text-align:right; margin:0 1rem 0 0; font-weight:normal; color:#444">Welcome, <%= safeUsername %></h2>
       <% } %>
       <header class="home-header">
         <div class="home-logo">
@@ -22,16 +22,16 @@
           <button type="button" aria-label="Buscar"></button>
         </div>
         <nav class="home-nav">
-          <a href="#" class="active">About us</a>
           <a href="#" class="active">Cars</a>
-          <a href="#">Motobikes</a>
-          <a href="#">Trucks</a>
-          <a href="#">Offers</a>
+          <a href="#" class="active">Motobikes</a>
+          <a href="#" class="active">Trucks</a>
+          <a href="#" class="offers">Offers</a>
+          <a href="/nosotros.html" class="info">About us</a>
+          <a href="/contacto.html" class="info">Contact</a>
         </nav>
         <div class="home-actions">
           <% if (safeUsername !== 'usuario') { %>
-            <span style="font-size:1.1em; font-weight:bold; color:#315;"><i class="fa fa-user"></i> <%= safeUsername %></span>
-            <a class="btn btn-secondary" href="/logout" style="margin-left:0.7em;">Cerrar sesión</a>
+            <a class="btn btn-secondary" href="/logout" style="margin-left:0.7em;">Sign out</a>
           <% } else { %>
             <a class="btn btn-primary" href="/">Sign up</a>
           <% } %>

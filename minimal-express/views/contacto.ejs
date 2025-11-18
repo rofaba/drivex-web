@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="auth-card">
+    <header class="auth-header">
+      <h1 class="titulo-principal">
+        <img src="/imagenes/image.png" alt="Logo" class="logo">
+        Contact
+      </h1>
+      <p>Leave us your message and we will get back to you as soon as possible.</p>
+    </header>
+
+    <form action="/contacto" method="POST" id="form-contacto">
+      
+      <div class="form-group">
+        <label for="nombre">Name</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          placeholder="Your name"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="youremail@example.com"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Message</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          required
+          placeholder="Write your message here..."
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="form-checkbox">
+        <input type="checkbox" id="privacidad" required>
+        <label for="privacidad">
+          I have read and accept the privacy policy.
+        </label>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" type="button" onclick="window.location.href='/pag_final_contacto.html'">Send message</button>
+      </div>
+
+      <p class="helper-text">
+        You can also write to us at  
+        <a href="mailto:info@ejemplo.com">info@ejemplo.com</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="/js/contacto.js"></script>
+</body>
+</html>

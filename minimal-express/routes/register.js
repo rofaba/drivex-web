@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql2');
 
-// Configuración de MySQL
 const db = mysql.createConnection({
     host: 'localhost',
     port: 3307,
@@ -12,31 +11,29 @@ const db = mysql.createConnection({
 });
 
 db.connect(err => {
-    if (err) console.error('Error en MySQL:', err);
-    else console.log('Conexión MySQL OK');
+    if (err) console.error('MySQL error:', err);
+    else console.log('MySQL connection OK');
 });
 
-// GET /register -> muestra formulario
 router.get('/', (req, res) => {
-    res.render('registro');
+    res.render('register');
 });
 
-// POST /register -> inserta usuario
 router.post('/', (req, res) => {
-    console.log('POST recibido:', req.body);
+    console.log('POST received:', req.body);
 
     const { username } = req.body;
-    if (!username) return res.status(400).send('Se requiere nombre de usuario');
+    if (!username) return res.status(400).send('Username is required');
 
     const sql = 'INSERT INTO Users (username) VALUES (?)';
     db.query(sql, [username], (err, results) => {
         if (err) {
-            console.error('Error en BD:', err);
-            return res.status(500).send('Error en la base de datos');
+            console.error('DB error:', err);
+            return res.status(500).send('Database error');
         }
 
-        console.log('Usuario insertado:', results);
-        res.send('Usuario guardado correctamente');
+        console.log('User inserted:', results);
+        res.send('User saved successfully');
     });
 });
 

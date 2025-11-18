@@ -2,14 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Área de Usuario</title>
+    <title>User Area</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
     <main>
-      <h1>Bienvenido <span id="loggedInUser">usuario</span></h1>
-      <p>Has iniciado sesión o completado tu registro correctamente.</p>
-      <a href="/">Volver al inicio</a>
+      <h1>Welcome <span id="loggedInUser">user</span></h1>
+      <p>You have successfully logged in or completed your registration.</p>
+      <a href="/">Return to home</a>
     </main>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -18,10 +18,9 @@
         var usernameSpan = document.getElementById('loggedInUser');
 
         if (usernameSpan) {
-          usernameSpan.textContent = username ? username : 'usuario';
+          usernameSpan.textContent = username ? username : 'user';
         }
       });
     </script>
   </body>
 </html>
-
