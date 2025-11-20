@@ -177,6 +177,163 @@ a:hover {
   color: #38bdf8;
 }
 
+/* --- Admin panel --- */
+.admin-body {
+  background: #010101;
+  color: #f4f4f4;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: block;
+  padding: 0;
+}
+
+.admin-shell {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 48px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.admin-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-logo-block img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(248, 56, 56, 0.55));
+}
+
+.admin-logo-block strong {
+  display: block;
+  font-size: 18px;
+}
+
+.admin-logo-block span {
+  font-size: 13px;
+  color: #c4c4c4;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.admin-nav a {
+  color: #d9d9d9;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.admin-nav a.active {
+  color: #ff2a2a;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.admin-logout-icon {
+  font-size: 22px;
+}
+
+.admin-panel {
+  background: #050505;
+  border-radius: 12px;
+  padding: 32px;
+  border: 2px solid #1c1c1c;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #010101;
+  background: #f9f3f3;
+  padding: 16px 12px;
+}
+
+.admin-table td {
+  padding: 16px 12px;
+}
+
+.admin-table tr {
+  background: #ded8d8;
+}
+
+.admin-table tr.is-even {
+  background: #b9b6b6;
+}
+
+.admin-action button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background: #176d1f;
+  cursor: pointer;
+}
+
+.admin-action button svg {
+  width: 18px;
+  height: 18px;
+  fill: #111;
+}
+
+.admin-action button.danger {
+  background: #c8181d;
+}
+
+.admin-footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #e1e1e1;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
 /* --- Home layout --- */
 .home-body {
   background: #050607;
